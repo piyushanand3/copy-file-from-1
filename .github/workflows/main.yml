@@ -30,10 +30,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: List repository contents
-        run: ls -la
-      
-      - name: cat readme contents
-        run: cat README.md
+        run: ls -la && pwd
 
       - name: List destination directory contents
         run: ls -la ${{ env.DESTINATION_DIRECTORY }}
