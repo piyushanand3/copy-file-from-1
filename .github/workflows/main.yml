@@ -24,7 +24,13 @@ jobs:
         with:
           repository: ${{ env.DESTINATION_OWNER }}/${{ env.DESTINATION_REPO }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: List source directory contents
+        run: ls -la ${{ env.SOURCE_DIRECTORY }}
 
+      - name: List destination directory contents
+        run: ls -la ${{ env.DESTINATION_DIRECTORY }}
+      
       - name: Copy files
         run: |
           cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}/
