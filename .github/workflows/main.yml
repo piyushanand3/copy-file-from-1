@@ -32,8 +32,8 @@ jobs:
       - name: List destination repository contents
         run: ls -la && pwd
 
-      # - name: List destination directory contents
-      #   run: ls -la ${{ env.DESTINATION_DIRECTORY }}
+      - name: List destination directory contents
+        run: ls -la ${{ env.DESTINATION_REPO }}
       
       - name: Copy files
         run: |
