@@ -33,7 +33,7 @@ jobs:
         run: ls -la && pwd
 
       - name: List destination directory contents
-        run: ls -la ${{ env.DESTINATION_REPO }}
+        run: pwd ${{ env.DESTINATION_DIRECTORY }}
       
       - name: Copy files
         run: |
