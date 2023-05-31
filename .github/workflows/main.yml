@@ -9,7 +9,7 @@ env:
   DESTINATION_OWNER: piyushanand3
   DESTINATION_REPO: copy-repo-to-this
   SOURCE_DIRECTORY: copy-file-from-1/blob/main/dummy.txt
-  DESTINATION_DIRECTORY: copy-repo-to-this/
+  DESTINATION_DIRECTORY: copy-repo-to-this
 
 jobs:
   copy_files:
