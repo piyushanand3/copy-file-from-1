@@ -18,7 +18,8 @@ jobs:
     steps:
       - name: Checkout source repository
         uses: actions/checkout@v3
-
+      - name: List repository contents
+        run: ls -la && pwd
       - name: List source directory contents
         run: ls -la ${{ env.SOURCE_DIRECTORY }}
 
