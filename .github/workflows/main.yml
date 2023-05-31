@@ -19,11 +19,11 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v3
 
-      - name: Checkout destination repository
-        uses: actions/checkout@v3
-        with:
-          repository: ${{ env.DESTINATION_OWNER }}/${{ env.DESTINATION_REPO }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # # - name: Checkout destination repository
+      # #   uses: actions/checkout@v3
+      #   with:
+      #     repository: ${{ env.DESTINATION_OWNER }}/${{ env.DESTINATION_REPO }}
+      #     token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: List repository contents
         run: ls -la
@@ -34,13 +34,13 @@ jobs:
       - name: List source directory contents
         run: ls -la ${{ env.SOURCE_DIRECTORY }}
 
-      - name: List destination directory contents
-        run: ls -la ${{ env.DESTINATION_DIRECTORY }}
+      # - name: List destination directory contents
+      #   run: ls -la ${{ env.DESTINATION_DIRECTORY }}
       
-      - name: Copy files
-        run: |
-          cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}/
-          cd ${{ env.DESTINATION_DIRECTORY }}
-          git add .
-          git commit -m 'Copy files from source repository'
-          git push
+      # - name: Copy files
+      #   run: |
+      #     cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}/
+      #     cd ${{ env.DESTINATION_DIRECTORY }}
+      #     git add .
+      #     git commit -m 'Copy files from source repository'
+      #     git push
