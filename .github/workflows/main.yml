@@ -37,7 +37,7 @@ jobs:
       
       - name: Copy files
         run: |
-          cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}/
+          cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}
           cd ${{ env.DESTINATION_DIRECTORY }}
           git add .
           git commit -m 'Copy files from source repository'
