@@ -8,7 +8,7 @@ on:
 env:
   DESTINATION_OWNER: piyushanand3
   DESTINATION_REPO: copy-repo-to-this
-  SOURCE_DIRECTORY: /
+  SOURCE_DIRECTORY: /home/runner/work/copy-file-from-1/copy-file-from-1
   DESTINATION_DIRECTORY: /
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
       
       - name: Copy files
         run: |
-          cp -r ${{ env.SOURCE_DIRECTORY }}* ${{ env.DESTINATION_DIRECTORY }}
+          cp -r ${{ env.SOURCE_DIRECTORY }}/* ${{ env.DESTINATION_DIRECTORY }}/
           cd ${{ env.DESTINATION_DIRECTORY }}
           git add .
           git commit -m 'Copy files from source repository'
