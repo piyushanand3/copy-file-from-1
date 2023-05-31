@@ -8,8 +8,8 @@ on:
 env:
   DESTINATION_OWNER: piyushanand3
   DESTINATION_REPO: copy-repo-to-this
-  SOURCE_DIRECTORY: /home/runner/work/copy-file-from-1/copy-file-from-1
-  DESTINATION_DIRECTORY: copy-repo-to-this
+  SOURCE_DIRECTORY: /home/runner/work/copy-file-from-1/copy-file-from-1/dummy.txt
+  DESTINATION_DIRECTORY: /home/runner/work/copy-file-from-1/copy-file-from-1
 
 jobs:
   copy_files:
