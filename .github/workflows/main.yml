@@ -27,6 +27,7 @@ jobs:
       
       - name: List repository contents
         run: ls -la
+        run: cat README.md
       
       - name: List source directory contents
         run: ls -la ${{ env.SOURCE_DIRECTORY }}
